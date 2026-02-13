@@ -4,7 +4,7 @@ export default function ValentineCard() {
   const [showLetter, setShowLetter] = useState(false);
   const [letterContent] = useState({
     greeting: "Dear Izell",
-    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you make me laugh, the way you always support me with everything you have, the way you crashout on your sister, the way you get greedy. EVERYTHINGGGG ABOUT YOU I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a cute laufey song plays in my head. I’ve genuinely never felt this comfortable and compatible that I can’t believe its real.I hope I make you feel the same way and we can feel this way for a LONG time. Now, I should’ve given you a playlist. Can you read what first letters of each song spells out for me please :)",
+    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you laugh, the way you always support all of your friends, the way you crashout on your sister, the way you get greedy with me. EVERYTHINGGGG ABOUT YOU I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a cute romcom song plays in my head [here is the OST :D](https://open.spotify.com/playlist/5vnQijqfNQchqTRovIGHrT?si=40eb4d8fa08d442a&pt=2334fa83f2b684397356c15a9fb170a1). I’ve genuinely never felt this comfortable and compatible that I can’t believe its real.I hope I make you feel the same way and we can feel this way together for a LONG time. The garden I've grown for so long has found the butterfly I'd love to keep around :).",
     closing: "From,",
     signature: "Gabe :D"
   });
@@ -21,7 +21,43 @@ export default function ValentineCard() {
     "/uploads/img_4.png",  // Middle right
     "/uploads/img_6.png"   // Bottom right
   ];
-
+  const renderMessageWithLinks = (text) => {
+    const parts = [];
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let lastIndex = 0;
+    let match;
+  
+    while ((match = regex.exec(text)) !== null) {
+      // Add text before the link
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+      // Add the link
+      parts.push(
+        <a 
+          key={match.index}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ 
+            color: '#8b454e', 
+            textDecoration: 'underline',
+            fontWeight: '500'
+          }}
+        >
+          {match[1]}
+        </a>
+      );
+      lastIndex = regex.lastIndex;
+    }
+    
+    // Add remaining text
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+    
+    return parts.length > 0 ? parts : text;
+  };
   const handleCardClick = () => {
     setShowLetter(true);
   };
@@ -244,7 +280,7 @@ export default function ValentineCard() {
                   margin: 0,
                   fontFamily: "'Georgia', serif",
                   whiteSpace: 'pre-wrap'
-                }}>{letterContent.message}</p>
+                }}>{renderMessageWithLinks(letterContent.message)}</p>
               </div>
 
               <div style={{
