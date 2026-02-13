@@ -4,7 +4,7 @@ export default function ValentineCard() {
   const [showLetter, setShowLetter] = useState(false);
   const [letterContent] = useState({
     greeting: "Dear Izell",
-    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you make me laugh, the way you always support me with everything you have, the way you crashout on your sister, the way you get greedy. EVERYTHINGGGG I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a laufey song plays in my head. I’ve genuinely never felt this comfortable and compatible with anyone but you.I hope I make you feel the same way and we can feel this way for a LONG time. happy valentines day mi reina and to more :)",
+    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you make me laugh when you troll me, the way you always support me with everything you have, the way you crashout on your sister, the way you get greedy, the way I want to talk to you first when I hear something good. EVERYTHINGGGG I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a laufey song plays in my head. I’ve genuinely never felt this comfortable and compatible with anyone but you.I hope I make you feel the same way and we can feel this way for a LONG time. happy valentines day mi reina and to more :)",
     closing: "From,",
     signature: "Gabe :D"
   });
@@ -53,12 +53,12 @@ export default function ValentineCard() {
           alt={`Left decoration ${index + 1}`}
           style={{
             position: 'fixed',
-            left: '30px',
-            top: index === 0 ? '30px' : index === 1 ? '50%' : 'auto',
-            bottom: index === 2 ? '30px' : 'auto',
+            left: '20px',
+            top: index === 0 ? '20px' : index === 1 ? '50%' : 'auto',
+            bottom: index === 2 ? '20px' : 'auto',
             transform: index === 1 ? 'translateY(-50%)' : 'none',
-            width: '100px',
-            height: '100px',
+            width: '150px',
+            height: '150px',
             objectFit: 'cover',
             borderRadius: '15px',
             border: '4px solid white',
@@ -76,12 +76,12 @@ export default function ValentineCard() {
           alt={`Right decoration ${index + 1}`}
           style={{
             position: 'fixed',
-            right: '30px',
-            top: index === 0 ? '30px' : index === 1 ? '50%' : 'auto',
-            bottom: index === 2 ? '30px' : 'auto',
+            right: '20px',
+            top: index === 0 ? '20px' : index === 1 ? '50%' : 'auto',
+            bottom: index === 2 ? '20px' : 'auto',
             transform: index === 1 ? 'translateY(-50%)' : 'none',
-            width: '100px',
-            height: '100px',
+            width: '150px',
+            height: '150px',
             objectFit: 'cover',
             borderRadius: '15px',
             border: '4px solid white',
@@ -230,7 +230,7 @@ export default function ValentineCard() {
                   fontSize: '28px',
                   fontWeight: '600',
                   color: '#8b454e',
-                  fontFamily: "'Georgia', serif"
+                  fontFamily: "'Brush Script MT', cursive"
                 }}>{letterContent.greeting}</h2>
               </div>
 
