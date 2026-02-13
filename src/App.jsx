@@ -4,7 +4,7 @@ export default function ValentineCard() {
   const [showLetter, setShowLetter] = useState(false);
   const [letterContent] = useState({
     greeting: "Dear Izell",
-    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you make me laugh when you troll me, the way you always support me with everything you have, the way you crashout on your sister, the way you get greedy, the way I want to talk to you first when I hear something good. EVERYTHINGGGG I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a laufey song plays in my head. I’ve genuinely never felt this comfortable and compatible with anyone but you.I hope I make you feel the same way and we can feel this way for a LONG time. happy valentines day mi reina and to more :)",
+    message: "MANNN YOU COOK ME. I like you SOOOO MUCHHHHH. The way you care for ek and jd you gave them small handsewn cats, the way you make me laugh, the way you always support me with everything you have, the way you crashout on your sister, the way you get greedy. EVERYTHINGGGG ABOUT YOU I LIKE IT SOOO MUCH. You got me so cooked whenever I see you in person a cute laufey song plays in my head. I’ve genuinely never felt this comfortable and compatible that I can’t believe its real.I hope I make you feel the same way and we can feel this way for a LONG time. Now, I should’ve given you a playlist. Can you read what first letters of each song spells out for me please :)",
     closing: "From,",
     signature: "Gabe :D"
   });
